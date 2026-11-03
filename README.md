@@ -1,8 +1,8 @@
-# Podcast Manager
+# Catálogo de Podcasts
 
 ## Descrição
 
-Aplicação inspirada em um catálogo de streaming para reunir episódios de podcasts em vídeo. O projeto contém uma API construída com Node.js e TypeScript sem framework e uma interface React para explorar os episódios.
+Aplicação web para explorar episódios de podcasts publicados no YouTube. O projeto reúne uma API desenvolvida com Node.js e TypeScript, sem framework, e uma interface React para pesquisar e filtrar os episódios.
 
 ## Domínio
 

@@ -1,5 +1,6 @@
 {
-  "name": "podcast-episodes-ui",
+  "name": "catalogo-de-podcasts-frontend",
+  "description": "Interface React para pesquisar e assistir episódios de podcasts no YouTube.",
   "private": true,
   "version": "1.0.0",
   "type": "module",
