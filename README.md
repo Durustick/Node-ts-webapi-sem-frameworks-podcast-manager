@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Aplicação web para explorar episódios de podcasts publicados no YouTube. O projeto reúne uma API desenvolvida com Node.js e TypeScript, sem framework, e uma interface React para pesquisar e filtrar os episódios.
+Aplicação web para listar episódios de podcasts publicados no YouTube. O projeto reúne uma API desenvolvida com Node.js e TypeScript, sem framework, e uma interface React para pesquisar e filtrar os episódios.
 
 ## Domínio
 
