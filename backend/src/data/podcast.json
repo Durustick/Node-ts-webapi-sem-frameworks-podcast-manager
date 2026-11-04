@@ -1,21 +1,21 @@
 [
             {
                 "podcastName": "flow",
-                "podcastImage": "/images/podcasts/flow.png",
+                "podcastImage": "/images/podcasts/imagem%201.png",
                 "episode": "CBUM - Flow #319",
                 "videoId": "pQSuQmUfS30",
                 "categories": ["saúde", "esporte", "bodybuilder"]
             },
             {
                 "podcastName": "flow",
-                "podcastImage": "/images/podcasts/flow.png",
+                "podcastImage": "/images/podcasts/imagem%201.png",
                 "episode": "RUBENS BARRICHELLO - Flow #339",
                 "videoId": "4KDGTdiOV4I",
                 "categories": ["esporte", "corrida"]
             },
             {
                 "podcastName": "inteligência Ltda.",
-                "podcastImage": "/images/podcasts/inteligencia-ltda.png",
+                "podcastImage": "/images/podcasts/imagem%202.png",
                 "episode": "SÉRGIO SACANI (SPACE TODAY) - Inteligência Ltda. Podcast #113",
                 "videoId": "INnXkoJwV0M",
                 "categories": [" tecnologia espacial", "ciência", "universo"]

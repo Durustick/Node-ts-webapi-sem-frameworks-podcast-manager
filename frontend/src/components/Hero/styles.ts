@@ -150,20 +150,3 @@ export const ArtLabel = styled.span`
   line-height: 1.6;
   letter-spacing: 1px;
 `
-
-export const HeroIndex = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 20px;
-  color: var(--color-muted);
-  font-size: 10px;
-
-  span {
-    padding: 0 6px;
-    color: #b293dc;
-  }
-
-  @media (max-width: 520px) {
-    bottom: 14px;
-  }
-`

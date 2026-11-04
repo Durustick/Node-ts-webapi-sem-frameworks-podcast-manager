@@ -96,7 +96,7 @@ Filtra pelo nome exato do podcast e retorna uma lista JSON. O frontend carrega a
 [
   {
     "podcastName": "flow",
-    "podcastImage": "/images/podcasts/flow.png",
+    "podcastImage": "/images/podcasts/imagem%201.png",
     "episode": "CBUM - Flow #319",
     "videoId": "pQSuQmUfS30",
     "categories": ["saúde", "esporte", "bodybuilder"]

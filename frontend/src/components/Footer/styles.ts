@@ -26,10 +26,6 @@ export const FooterContainer = styled.footer`
     margin-left: -7px;
   }
 
-  > a:last-child {
-    color: var(--color-purple-dark);
-  }
-
   @media (max-width: 520px) {
     min-height: 60px;
 

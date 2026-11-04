@@ -9,6 +9,7 @@ import { CatalogSection, Container, EpisodeCount, SectionEyebrow, SectionHeading
 import type { Episode } from '../types/episode'
 
 const ALL_PODCASTS = 'Todos os podcasts'
+
 function App() {
   const [episodes, setEpisodes] = useState<Episode[]>([])
   const [selectedPodcast, setSelectedPodcast] = useState(ALL_PODCASTS)
@@ -25,7 +26,11 @@ function App() {
         setEpisodes(data)
       } catch (reason) {
         if (!controller.signal.aborted) {
-          setError(reason instanceof Error ? reason.message : 'Não foi possível carregar os episódios.')
+          const message = reason instanceof Error
+            ? reason.message
+            : 'Não foi possível carregar os episódios.'
+
+          setError(message)
         }
       } finally {
         if (!controller.signal.aborted) setLoading(false)
@@ -37,14 +42,15 @@ function App() {
     return () => controller.abort()
   }, [])
 
-  const term = query.trim().toLocaleLowerCase('pt-BR')
+  const searchTerm = query.trim().toLocaleLowerCase('pt-BR')
   const podcasts = [...new Set(episodes.map((episode) => episode.podcastName))]
   const visibleEpisodes = episodes.filter((episode) => {
     const matchesPodcast = selectedPodcast === ALL_PODCASTS || episode.podcastName === selectedPodcast
-    const searchableText = `${episode.episode} ${episode.podcastName} ${episode.categories.join(' ')}`.toLocaleLowerCase('pt-BR')
-    const matchesSearch = searchableText.includes(term)
+    const searchableText = [episode.episode, episode.podcastName, ...episode.categories]
+      .join(' ')
+      .toLocaleLowerCase('pt-BR')
 
-    return matchesPodcast && matchesSearch
+    return matchesPodcast && searchableText.includes(searchTerm)
   })
 
   return (
@@ -53,11 +59,27 @@ function App() {
       <Hero />
       <CatalogSection id="episodios">
         <SectionHeading>
-          <div><SectionEyebrow>CURADORIA PRA SUA ROTINA</SectionEyebrow><h2>Escolha sua próxima escuta<span>.</span></h2></div>
-          <EpisodeCount><strong>{String(visibleEpisodes.length).padStart(2, '0')}</strong><span> episódios<br />para descobrir</span></EpisodeCount>
+          <div>
+            <SectionEyebrow>CURADORIA PRA SUA ROTINA</SectionEyebrow>
+            <h2>Escolha sua próxima escuta<span>.</span></h2>
+          </div>
+          <EpisodeCount>
+            <strong>{String(visibleEpisodes.length).padStart(2, '0')}</strong>
+            <span> episódios<br />para descobrir</span>
+          </EpisodeCount>
         </SectionHeading>
-        <EpisodeToolbar query={query} podcasts={podcasts} selectedPodcast={selectedPodcast} onQueryChange={setQuery} onPodcastChange={setSelectedPodcast} />
-        <EpisodeResults episodes={visibleEpisodes} loading={loading} error={error} />
+        <EpisodeToolbar
+          query={query}
+          podcasts={podcasts}
+          selectedPodcast={selectedPodcast}
+          onQueryChange={setQuery}
+          onPodcastChange={setSelectedPodcast}
+        />
+        <EpisodeResults
+          episodes={visibleEpisodes}
+          loading={loading}
+          error={error}
+        />
       </CatalogSection>
       <Footer />
     </Container>

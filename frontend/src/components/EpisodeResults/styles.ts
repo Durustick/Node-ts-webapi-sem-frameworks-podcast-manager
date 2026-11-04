@@ -105,15 +105,6 @@ export const Banner = styled.aside`
     font: 600 11px 'Manrope', sans-serif;
   }
 
-  > a {
-    display: grid;
-    place-items: center;
-    width: 31px;
-    height: 31px;
-    border: 1px solid #d4c1e8;
-    border-radius: 50%;
-  }
-
   @media (max-width: 520px) {
     gap: 9px;
     padding: 10px;

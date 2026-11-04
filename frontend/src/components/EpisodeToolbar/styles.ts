@@ -49,20 +49,6 @@ export const SearchBox = styled.label`
   }
 `
 
-export const Shortcut = styled.span`
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 23px;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-size: 16px;
-
-  @media (max-width: 520px) {
-    display: none;
-  }
-`
-
 export const FilterBox = styled.label`
   display: flex;
   align-items: center;

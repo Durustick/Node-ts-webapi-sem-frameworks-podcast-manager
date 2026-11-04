@@ -87,7 +87,7 @@ O backend também oferece esta rota. O frontend filtra localmente a lista já ca
 [
   {
     "podcastName": "flow",
-    "podcastImage": "/images/podcasts/flow.png",
+    "podcastImage": "/images/podcasts/imagem%201.png",
     "episode": "CBUM - Flow #319",
     "videoId": "pQSuQmUfS30",
     "categories": ["saúde", "esporte", "bodybuilder"]
