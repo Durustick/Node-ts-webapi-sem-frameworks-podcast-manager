@@ -1,9 +1,21 @@
-# Dependências do frontend
+# Arquivos gerados na raiz do monorepo
 /node_modules/
-
-# Saída gerada pelo Vite
 /dist/
-/.vite/
+/tsconfig.tsbuildinfo
 
-# Cache gerado pelo TypeScript
-*.tsbuildinfo
+# Variáveis de ambiente locais (mantém o exemplo versionável)
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos do sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
