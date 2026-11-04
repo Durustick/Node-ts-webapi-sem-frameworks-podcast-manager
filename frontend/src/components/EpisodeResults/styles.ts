@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 export const EpisodeGrid = styled.div`
   display: grid;
@@ -19,62 +19,14 @@ export const EpisodeGrid = styled.div`
   }
 `
 
-const spin = keyframes`
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-const Notice = styled.div`
+export const StatusMessage = styled.p<{ $error?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   min-height: 170px;
-  color: var(--color-muted);
+  margin: 0;
+  color: ${({ $error }) => ($error ? '#6b5c48' : 'var(--color-muted)')};
   font-size: 12px;
-
-  strong {
-    color: var(--color-ink);
-    font: 600 13px 'Manrope', sans-serif;
-  }
-
-  p {
-    margin: 5px 0 0;
-    color: var(--color-muted);
-    font-size: 11px;
-  }
-`
-
-export const ErrorNotice = styled(Notice)`
-  color: #6b5c48;
-`
-
-export const NoticeIcon = styled.span`
-  display: grid;
-  place-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #f3eaf9;
-`
-
-export const EmptyNotice = styled(Notice)`
-  flex-direction: column;
-  gap: 6px;
-
-  p {
-    margin: 0;
-  }
-`
-
-export const Spinner = styled.span`
-  width: 16px;
-  height: 16px;
-  border: 2px solid #e6dcf0;
-  border-top-color: var(--color-purple);
-  border-radius: 50%;
-  animation: ${spin} 0.8s linear infinite;
 `
 
 export const Banner = styled.aside`

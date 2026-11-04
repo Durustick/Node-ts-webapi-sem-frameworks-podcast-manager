@@ -1,40 +1,21 @@
 import { Headphones } from 'lucide-react'
 import type { Episode } from '../../types/episode'
 import EpisodeCard from '../EpisodeCard'
-import { Banner, BannerIcon, EmptyNotice, EpisodeGrid, ErrorNotice, NoticeIcon, Spinner } from './styles'
+import { Banner, BannerIcon, EpisodeGrid, StatusMessage } from './styles'
 
 type EpisodeResultsProps = { episodes: Episode[]; loading: boolean; error: string }
 
 function EpisodeResults({ episodes, loading, error }: EpisodeResultsProps) {
   if (error) {
-    return (
-      <ErrorNotice>
-        <NoticeIcon>!</NoticeIcon>
-        <div>
-          <strong>Seus episódios estão quase chegando.</strong>
-          <p>{error}</p>
-        </div>
-      </ErrorNotice>
-    )
+    return <StatusMessage $error role="alert">{error}</StatusMessage>
   }
 
   if (loading) {
-    return (
-      <EmptyNotice>
-        <Spinner />
-        Carregando episódios...
-      </EmptyNotice>
-    )
+    return <StatusMessage role="status">Carregando episódios...</StatusMessage>
   }
 
   if (!episodes.length) {
-    return (
-      <EmptyNotice>
-        <Headphones size={24} />
-        <strong>Nenhum episódio encontrado.</strong>
-        <p>Tente buscar outro termo ou escolha um podcast diferente.</p>
-      </EmptyNotice>
-    )
+    return <StatusMessage role="status">Nenhum episódio encontrado.</StatusMessage>
   }
 
   return <>
