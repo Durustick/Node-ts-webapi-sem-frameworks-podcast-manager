@@ -1,4 +1,4 @@
- Podcasts Menager
+ Podcasts Manager
 
 ## Descrição
 
