@@ -1,17 +1,12 @@
-# Dependências
-node_modules/
-
-# Saída gerada pelo Vite
-dist/
-.vite/
+# Arquivos gerados na raiz do monorepo
+/node_modules/
+/dist/
+/tsconfig.tsbuildinfo
 
 # Variáveis de ambiente locais (mantém o exemplo versionável)
 .env
 .env.*
 !.env.example
-
-# Cache e arquivos gerados pelo TypeScript
-*.tsbuildinfo
 
 # Logs
 npm-debug.log*

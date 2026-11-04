@@ -1,0 +1,9 @@
+# Dependências do frontend
+/node_modules/
+
+# Saída gerada pelo Vite
+/dist/
+/.vite/
+
+# Cache gerado pelo TypeScript
+*.tsbuildinfo
